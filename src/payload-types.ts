@@ -372,6 +372,10 @@ export interface Category {
 export interface User {
   id: number;
   name?: string | null;
+  nickname?: string | null;
+  'birth date'?: string | null;
+  nationality?: string | null;
+  gender?: ('male' | 'female' | 'non-binary' | 'not-specified') | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -1263,6 +1267,10 @@ export interface CategoriesSelect<T extends boolean = true> {
  */
 export interface UsersSelect<T extends boolean = true> {
   name?: T;
+  nickname?: T;
+  'birth date'?: T;
+  nationality?: T;
+  gender?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
