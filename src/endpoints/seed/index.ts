@@ -111,6 +111,7 @@ export const seed = async ({
         name: 'Demo Author',
         email: 'demo-author@example.com',
         password: 'password',
+        management: 'user', // Add this line to fix the error
       },
     }),
     payload.create({
@@ -301,7 +302,7 @@ export const seed = async ({
     payload.create({
       collection: 'pages',
       depth: 0,
-      data: home({heroImage: imageHomeDoc, metaImage: image2Doc}),
+      data: home({ heroImage: imageHomeDoc, metaImage: image2Doc }),
     }),
     payload.create({
       collection: 'pages',

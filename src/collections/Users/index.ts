@@ -49,6 +49,7 @@ export const Users: CollectionConfig = {
     {
       name: 'name',
       type: 'text',
+      required: true,
     },
     {
       name: 'nickname',
@@ -57,6 +58,8 @@ export const Users: CollectionConfig = {
     {
       name: 'email',
       type: 'email',
+      required: true,
+      unique: true,
     },
     {
       name: 'birth date',
